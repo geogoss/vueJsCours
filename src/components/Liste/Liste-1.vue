@@ -4,15 +4,18 @@
             <li v-for="(fruit, index) in fruits" v-bind:key="index"> {{ fruit }} </li>
         </ul>
 
-        <!-- <p>
+        <p>
             {{ prenom }}
         </p>
         <p>
+            {{ reversing() }}
+        </p>
+        <!-- <p>
             {{ insectes[2] }}
         </p> -->
-        <p>
+        <!-- <p>
             {{ choses.table }}
-        </p>
+        </p> -->
 
 
     </div>
@@ -25,7 +28,13 @@ export default {
             fruits: ['fraise', 'papaye', 'orange', 'citron']
         }
     },
-    props: ['prenom', 'insectes', 'choses']
+    props: ['prenom', 'insectes', 'choses'],
+    methods: {
+        // méthode qui utilise la props prenom pour l'inverser
+        reversing: function(){
+            return this.prenom.split('').reverse().join('')
+        }
+    }
     
 }
 

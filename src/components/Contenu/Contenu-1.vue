@@ -1,15 +1,17 @@
 <template>
-    <div>
+    <div class="container">
         <p> {{ txt }} </p>
         <!-- <liste v-bind:prenom="prenom"></liste> -->
         <!-- <liste v-bind:insectes="insectes"></liste> -->
-        <liste v-bind:choses="choses"></liste>
+        <liste v-bind:prenom="prenom"></liste>
+        <suite-1></suite-1>
     </div>
 </template>
 
 <script>
 
 import Liste from '../Liste/Liste-1.vue'
+import Suite1 from '../Suite1/Suite-1.vue'
 
     export default {
         nom: 'contenu-1',
@@ -27,8 +29,10 @@ import Liste from '../Liste/Liste-1.vue'
             }
         },
         components: {
-            'liste': Liste
+            'liste': Liste,
+            'suite-1': Suite1
         }
+                
     }
 
 </script>
