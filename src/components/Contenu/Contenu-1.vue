@@ -1,9 +1,12 @@
 <template>
     <div>
         <p> {{ txt }} </p>
-        <liste></liste>
+        <!-- <liste v-bind:prenom="prenom"></liste> -->
+        <!-- <liste v-bind:insectes="insectes"></liste> -->
+        <liste v-bind:choses="choses"></liste>
     </div>
 </template>
+
 <script>
 
 import Liste from '../Liste/Liste-1.vue'
@@ -12,7 +15,15 @@ import Liste from '../Liste/Liste-1.vue'
         nom: 'contenu-1',
         data: function(){
             return {
-                txt: 'Je suis le contenu'
+                txt: 'Je suis le contenu',
+                prenom: 'Geoffrey',
+                insectes: ["fourmi", "abeille", "guèpe", "coléoptère"],
+                choses: {
+                    matelas: 1,
+                    table: 3,
+                    chaise: 9,
+                    assiettes: 16
+                }
             }
         },
         components: {
